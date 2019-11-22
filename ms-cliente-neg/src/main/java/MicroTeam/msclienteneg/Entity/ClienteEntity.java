@@ -15,9 +15,9 @@ public class ClienteEntity implements Serializable {
 
     @Id
     @NotNull
+    private String Id;
+
     private String rut;
-
-
     private String nombre;
     private String apellido;
     private int edad;

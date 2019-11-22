@@ -27,7 +27,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Optional<ClienteEntity> buscarClientePorRut(String rut) {
-        return this.clienteRepository.findById(rut);
+        return this.clienteRepository.findOneByRut(rut);
     }
 
 
@@ -45,7 +45,7 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public void deleteClientePorRut(String rut) {
 
-         this.clienteRepository.deleteById(rut);
+         this.clienteRepository.findById(rut);
     }
 
     @Override
