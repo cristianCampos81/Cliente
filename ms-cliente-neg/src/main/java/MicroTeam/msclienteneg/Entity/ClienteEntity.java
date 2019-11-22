@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 @Data
 @Document(collection = "cliente")
@@ -22,7 +21,7 @@ public class ClienteEntity implements Serializable {
     private int edad;
     private String sexo;
     private String tipo_licencia;
-    private LocalDate fecha_vencimiento;
-    private LocalDate fecha_emision;
+    private String fecha_vencimiento;
+    private String fecha_emision;
 
 }

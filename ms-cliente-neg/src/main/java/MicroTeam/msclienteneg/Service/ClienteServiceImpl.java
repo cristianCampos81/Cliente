@@ -18,7 +18,7 @@ public class ClienteServiceImpl implements ClienteService {
     public String createClienteEntity(ClienteEntity cliente) {
         if (cliente.getEdad()>=25){
           this.clienteRepository.save(cliente);
-          return "Cliente inbgresado";
+          return "Cliente inngresado";
         }else{
             return " no puede ser menor a 25 años";
         }
@@ -41,8 +41,15 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
+    public void deleteClientePorRut(String rut) {
+
+         this.clienteRepository.deleteById(rut);
+    }
+
+    @Override
     public void deleteClienteEntity(ClienteEntity cliente) {
-              this.clienteRepository.deleteAll();
+
+        this.clienteRepository.deleteAll();
     }
 
 
