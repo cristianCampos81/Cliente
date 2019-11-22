@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteServiceImpl implements ClienteService {
@@ -25,9 +26,10 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ClienteEntity buscarClientePorRut(String rut) {
-        return this.clienteRepository.findOneByRut(rut).get();
+    public Optional<ClienteEntity> buscarClientePorRut(String rut) {
+        return this.clienteRepository.findById(rut);
     }
+
 
     @Override
     public List<ClienteEntity> buscarTodos() {

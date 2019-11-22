@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -18,19 +19,11 @@ public class ClienteController {
     @Autowired
     private ClienteServiceImpl clienteService;
 
-    @GetMapping("/getByRut")
-    public ResponseEntity<?> obtenerClientePorRut(@RequestParam String rut) {
-        ResponseEntity<?> response;
-        try {
-            ClienteEntity cliente = this.clienteService.buscarClientePorRut(rut);
-            response = new ResponseEntity<>(cliente, HttpStatus.OK);
-
-        } catch (Exception ex) {
-            //log.error(ex.getMessage(), ex);
-            response = new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-        return response;
+    @GetMapping( value = "/getByRut/{cliente}")
+        public Optional<ClienteEntity> getByRut(@PathVariable(value = "cliente")String rut){
+        return clienteService.buscarClientePorRut(rut);
     }
+
      @GetMapping("/getAll")
     public ResponseEntity<?>getAll(){
         ResponseEntity<?>response;
