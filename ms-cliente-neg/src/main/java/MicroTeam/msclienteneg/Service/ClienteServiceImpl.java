@@ -45,13 +45,12 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public void deleteClientePorRut(String rut) {
 
-         this.clienteRepository.findById(rut);
+         this.clienteRepository.deleteById(rut);
     }
 
     @Override
-    public void deleteClienteEntity(ClienteEntity cliente) {
-
-        this.clienteRepository.deleteAll();
+    public void DeleteAllClienteEntityes() {
+         this.clienteRepository.deleteAll();
     }
 
 

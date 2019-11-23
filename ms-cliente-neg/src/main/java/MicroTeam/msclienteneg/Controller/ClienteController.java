@@ -60,6 +60,13 @@ public class ClienteController {
          return "el cliente con el rut: " + rut + "ha sido eliminado";
     }
 
+    @DeleteMapping(value = "/deleteAll")
+     public String DeleteAll(){
+        clienteService.DeleteAllClienteEntityes();
+        return "Todos los clientes han sido eliminados";
+    }
+
+
     @PutMapping
      public String update(@PathVariable(value = "cliente") String rut, @RequestBody ClienteEntity c){
         c.setRut(rut);
