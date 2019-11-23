@@ -54,7 +54,7 @@ public class ClienteController {
         return response;
     }
 
-    @DeleteMapping(value = "/delete/Cliente")
+    @DeleteMapping(value = "/delete/{cliente}")
     public String delete(@PathVariable(value = "cliente-id") String rut){
          clienteService.deleteClientePorRut(rut);
          return "el cliente con el rut: " + rut + "ha sido eliminado";

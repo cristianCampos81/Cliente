@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ae97c68-45d4-47e7-b77b-1b212da4e77f" name="Default Changelist" comment=" se ingresaron Correcciones al update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MicroTeam/msclienteneg/Entity/ClienteEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MicroTeam/msclienteneg/Entity/ClienteEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/MicroTeam/msclienteneg/Service/ClienteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MicroTeam/msclienteneg/Service/ClienteServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Entity/ClienteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Entity/ClienteEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Service/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Service/ClienteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MicroTeam/msclienteneg/Controller/ClienteController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
