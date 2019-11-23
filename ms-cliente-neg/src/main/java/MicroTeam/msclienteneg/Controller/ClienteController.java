@@ -54,8 +54,8 @@ public class ClienteController {
         return response;
     }
 
-    @DeleteMapping(value = "/delete/{cliente}")
-    public String delete(@PathVariable(value = "cliente-id") String rut){
+    @DeleteMapping(value = "/delete/{rut}")
+    public String delete(@PathVariable(value = "rut") String rut){
          clienteService.deleteClientePorRut(rut);
          return "el cliente con el rut: " + rut + "ha sido eliminado";
     }
@@ -67,8 +67,8 @@ public class ClienteController {
     }
 
 
-    @PutMapping
-     public String update(@PathVariable(value = "cliente") String rut, @RequestBody ClienteEntity c){
+    @PutMapping(value = "/update/{rut}")
+     public String update(@PathVariable(value = "rut") String rut, @RequestBody ClienteEntity c){
         c.setRut(rut);
         clienteService.updateClienteEntity(c);
         return "El cliente con el rut:" + rut + "fue modificado";
