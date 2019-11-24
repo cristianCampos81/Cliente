@@ -5,6 +5,7 @@ import MicroTeam.msclienteneg.Repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,5 +54,16 @@ public class ClienteServiceImpl implements ClienteService {
          this.clienteRepository.deleteAll();
     }
 
+    public String ValidarLicencia(LocalDate vencimiento, ClienteEntity cliente){
+        LocalDate now = LocalDate.now();
+        LocalDate Vencimiento = cliente.getFecha_vencimiento();
+        if(vencimiento.isAfter(now)){
+            System.out.println("Licencia aceptada");
+            return "Cliente ingresado";
+        }else{
+            System.out.println("La licencia esta vencida");
+            return "La licencia esta vencida";
+        }
+    }
 
 }
